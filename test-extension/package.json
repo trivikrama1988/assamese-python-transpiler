@@ -1,0 +1,13 @@
+{
+    "name": "test-extension",
+    "version": "1.0.0",
+    "main": "./extension.js",
+    "engines": {"vscode": "^1.60.0"},
+    "activationEvents": ["onCommand:test.hello"],
+    "contributes": {
+        "commands": [{
+            "command": "test.hello",
+            "title": "Hello World"
+        }]
+    }
+}

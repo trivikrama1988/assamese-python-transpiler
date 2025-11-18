@@ -1,0 +1,65 @@
+{
+  "name": "assamese-python-extension",
+  "displayName": "Assamese Python Transpiler",
+  "description": "VS Code extension for Assamese → Python code transpilation and execution",
+  "version": "0.1.0",
+  "publisher": "assamese-python",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "assamesePython.run",
+        "title": "Run Assamese Python File",
+        "category": "Assamese Python"
+      }
+    ],
+    "menus": {
+      "command-palette": [
+        {
+          "command": "assamesePython.run",
+          "when": "editorLangId == aspy"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "id": "aspy",
+        "aliases": [
+          "Assamese Python",
+          "aspy"
+        ],
+        "extensions": [
+          ".aspy"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "aspy",
+        "scopeName": "source.aspy",
+        "path": "./syntaxes/aspy.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^4.9.5"
+  }
+}

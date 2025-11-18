@@ -1,0 +1,10 @@
+সংজ্ঞা fibonacci(n):
+    a = 0
+    b = 1
+    বাৰ i ত range(n):
+        প্ৰিন্ট(a)
+        c = a + b
+        a = b
+        b = c
+
+fibonacci(5)

@@ -1,0 +1,37 @@
+{
+  "scopeName": "source.aspy",
+  "name": "Assamese Python",
+  "patterns": [
+    {
+      "name": "keyword.control.aspy",
+      "match": "\\b(যদি|নহয়|যেতিয়া|বাৰ|ত|range|সংজ্ঞা|প্ৰত্যাবর্তন|ভাঙক|আগবাঢ়ক)\\b"
+    },
+    {
+      "name": "support.function.aspy",
+      "match": "\\b(প্ৰিন্ট|ইনপুট)\\b"
+    },
+    {
+      "name": "constant.language.aspy",
+      "match": "\\b(সঁচা|মিছা|নাই)\\b"
+    },
+    {
+      "name": "keyword.operator.aspy",
+      "match": "\\b(আৰু|অথবা|নহয়)\\b"
+    },
+    {
+      "name": "string.quoted.double.aspy",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.aspy",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "comment.line.number-sign.aspy",
+      "match": "#.*$"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Assamese loop example
+বাৰ i ত range(5):
+    প্ৰিন্ট(i)
